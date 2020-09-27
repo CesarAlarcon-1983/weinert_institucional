@@ -1,2 +1,31 @@
+include ../../_images/shopping-bag
+
 header.header
-    
+  div.header__container
+    a.header__logo(href="/")
+      img(src="/images/weinert-anniversary-logo.png")
+    nav.header__nav
+      ul.header__list
+        li.header__item
+          a(href="/estilo") Estilo
+        li.header__item
+          a(href="/historia") Historia
+        li.header__item
+          a(href="/vinos") Vinos
+        li.header__item
+          a(href="/visitanos") Visitanos
+        li.header__item
+          a(href="/nosotros") Nosotros
+        li.header__item
+          a(href="#") Media Room
+      a.header__store-button(href="#")
+        span Store
+        +shopping-bag()
+    div.header__hamburguer
+      span
+      span
+      span
+
+
+
+

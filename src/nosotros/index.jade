@@ -1,0 +1,54 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+  main.nosotros
+    section.nosotros__hero
+      div.nosotros__hero__wrapper
+        h1.nosotros__hero__title Nosotros
+        img(src="/images/underline.png")
+      ul.nosotros__hero__social
+        li
+          a(href="#" target="_blank")
+            i.fab.fa-facebook-f
+        li
+          a(href="#" target="_blank")
+            i.fab.fa-instagram
+        li
+          a(href="#" target="_blank")
+            i.fab.fa-twitter
+    section.nosotros__ubicacion
+      div.nosotros__ubicacion__container
+        div.nosotros__ubicacion__wrapper
+          div.nosotros__ubicacion__wrapper-content
+            h2.nosotros__ubicacion__title Ubicada en la provincia argentina de Mendoza. Bodega & cavas de weinert fue construida en 1890 por el inmigrante español Ramón Otero y fundada en 1975 por el brasilero de origen alemán don Bernardo Weinert.
+            p.nosotros__ubicacion__text La misión de quien porta el arte del vino* en su apellido y da nombre a su empresa familiar se sostiene desde hace más de cuarenta años: porducir vinos de alta calidad.
+        div.nosotros__ubicacion__wrapper
+
+      div.nosotros__ubicacion__group
+        div.nosotros__ubicacion__group-wrapper
+          div.nosotros__ubicacion__comment * Wein "vino" en alemán, su idioma de original.
+          div.nosotros__ubicacion__image
+            img(src="/images/nosotros/viejo2.jpg")
+            img.-small(src="/images/nosotros/viejo1.jpg")
+        div.nosotros__ubicacion__group-wrapper
+          span.nosotros__ubicacion__subtitle Weiner
+          p.nosotros__ubicacion__group-text Hasta 2017 la bodega acompaño durante 23 años el añejamiento del malbec en tonel más antiguo del mundo. Su cosecha y vinificación corresponden a don raúl de la mota, considerado el mejor enólogo del siglo XX en argentina.
+          p.nosotros__ubicacion__group-text Desde 1996 la producción se encuentra a cargo del enólogo suizo Hubert Weber quien, con tan solo 27 años, llegó a lujan de cuyo para quedarse. La multiplicidad culturral que dio origen a bodega & cavas de Weinert definen la excelencia y singularidad de los vinos que se producen en esta casa.
+          p.nosotros__ubicacion__group-text El edificio de ladrillos donde funciona la bodega se emplaza a pocos kilometros de la ciudad de Mendoza. De fachada simétrica y construido sobre tierra que solía alimentar viñedos, se inspira en la arquetectura italiana manierista y asombra con su monumentalidad. Se preserva tambien la casa patronal que mantiene aberturas, techos y pisos originales; así como un árbol pimiento ancestral que brota majestuoso entre ambas construcciones.
+
+    section.nosotros__bodega
+      h2.nosotros__bodega__title Bodega & cavas de weiner elabora sus vinos en este lugar de ensueño, donde los métodos tradicionales conviven con el presente y lo artistico se reúne con lo industrial, entre el desafio de lo fabricado y el respeto por la tierra como origen.
+      div.nosotros__bodega__container
+        div.nosotros__bodega__wrapper
+          div.nosotros__bodega__subtitle Bodega
+          div.nosotros__bodega__content
+            p.nosotros__bodega__text La celebración del vino nos recuerda nuestra conexión con los tiempos del mundo como escenario, en el que la bebida refleja el oscuro sopor de la tierra que recibe las lluvias y el rocío del cielo. Así el encuentro entre el cielo y la tierra habita en el vino que da el fruto de la cepa, un fruto en el que el elemnto nutricio de la tierra y el sol del cielo están confiados el uno del otro.
+            a.nosotros__bodega__button(href="#") Conoce nuestros vinos
+        div.nosotros__bodega__wrapper
+
+
+

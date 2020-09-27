@@ -1,4 +1,67 @@
 extends _layouts/base
 
 block content
-    main.home
+  main.home
+    section.home__hero
+      h1.home__hero__title El hombre persigue imposibles,<br> a veces los alcanza
+      ul.home__hero__social
+        li
+          a(href="#" target="_blank")
+            i.fab.fa-facebook-f
+        li
+          a(href="#" target="_blank")
+            i.fab.fa-instagram
+        li
+          a(href="#" target="_blank")
+            i.fab.fa-twitter
+    section.home__estilo
+      div.home__estilo__container
+        div.home__estilo__wrapper
+          div.home__estilo__content
+            h2.home__estilo__title Estilo
+            p.home__estilo__text La interpretación de la escuela<br> europea en el nuevo mundo.
+            a.home__estilo__button(href="#") Ver más
+        div.home__estilo__wrapper
+        div.home__estilo__wrapper
+        div.home__estilo__wrapper
+          div.home__estilo__content
+            h2.home__estilo__title Historia
+            p.home__estilo__text Etiquetamos malbec antes<br>del malbec
+            a.home__estilo__button(href="#") Ver más
+
+    section.home__interstitial
+      div.home__interstitial__content
+        span.quote-icon ❛❛
+        p.home__interstitial__quote Son incuestionablement los<br> mejores de Sudamérica.
+        div.home__interstitial__wrapper
+          p.home__interstitial__text Robert Parker
+          div.home__interstitial__group
+            span.home__interstitial__date (1994)
+            img(src="/images/underline.png")
+        div.home__interstitial__image
+          img(src="https://picsum.photos/id/237/200/200")
+
+    section.home__vinos
+      div.home__vinos__container
+        div.home__vinos__content
+          h2.home__vinos__title Vinos
+          p.home__vinos__text produciendo iconos de<br> elegancia y estilo.
+          a.home__vinos__button(href="#") Conoce nuestros vinos
+
+    section.home__visitanos
+      div.home__visitanos__container
+        div.home__visitanos__wrapper
+          div.home__visitanos__video
+            img(src="/images/video-placeholder.jpg")
+            i.fas.fa-play
+          div.home__visitanos__group
+            span.quote-icon ❛❛
+            p.home__visitanos__quote Si encuentras tu filisifía y la mantienes a través de los años, estarás en buen camino.
+            div.home__visitanos__quoter
+              img(src="/images/underline.png")
+              p.home__visitanos__quoter-text Bernardo C. Weinert
+
+        div.home__visitanos__content
+          h2.home__visitanos__title Visitanos
+          p.home__visitanos__text Vení a descubrir nuestras cavas subterráneas
+          a.home__visitanos__button(href="#") Conocer

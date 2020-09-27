@@ -1,0 +1,330 @@
+.vinos {
+
+  overflow: hidden;
+
+  &__hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    min-height: 80vh;
+    padding: 0 15px;
+    background: url('https://picsum.photos/id/236/1200/1200') no-repeat center center / cover;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, .35);
+    }
+
+    @include mq(md) {
+      padding: 0;
+    }
+
+    &__wrapper {
+      position: relative;
+      z-index: 2;
+
+      img {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 150px;
+        transform: rotate(10deg);
+
+        @include mq(md) {
+          top: 170px;
+        }
+      }
+    }
+
+    &__title {
+      margin: 0;
+      color: $white;
+      font-family: $altFont;
+      font-size: 90px;
+      letter-spacing: 4px;
+      font-weight: 100;
+      text-align: center;
+      transform: rotate(-5deg);
+      margin-bottom: 20px;
+
+      @include mq(md) {
+        font-size: 200px;
+        margin-bottom: 0;
+      }
+    }
+
+    &__text {
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 22px;
+      font-family: $titleFont;
+      margin: 0;
+      width: 100%;
+      display: block;
+      color: $white;
+      z-index: 1;
+
+      @include mq(md) {
+        font-size: 30px;
+      }
+    }
+
+    &__social {
+      position: absolute;
+      left: 15px;
+      bottom: 15px;
+      display: flex;
+      z-index: 2;
+
+      @include mq(md) {
+        left: 5vw;
+        bottom: 5vw;
+      }
+
+      li {
+        margin-right: 10px;
+
+        @include mq(md) {
+            margin-right: 20px;
+        }
+
+        a {
+          text-decoration: none;
+
+          i {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &__content {
+    @include mq(md) {
+      margin-top: -7%;
+    }
+
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      align-items: flex-end;
+
+      &--beige {
+        background: $lightBeige;
+      }
+
+      &--gray {
+        background: $darkestGray;
+      }
+    }
+
+    &__wrapper {
+      width: 100%;
+      padding: 50px 0;
+      position: relative;
+      
+      @include mq(md) {
+        height: 0;
+        padding: 0;
+        padding: 0 0 50% 0;
+        width: 50%;
+      }
+
+      &--order {
+        order: 1;
+
+        @include mq(md) {
+          order: 2;
+        }
+      }
+
+      &--overflow {
+        background: url('https://picsum.photos/id/237/1200/1200') no-repeat center center / cover;
+        width: 100%;
+        padding: 0 0 100% 0;
+        
+        @include mq(md) {
+          margin-left: 10vw;
+          padding: 0 0 57% 0;
+          width: calc(50% - 10vw);
+        }
+      }
+
+      &--weinert {
+        background: url('https://picsum.photos/id/236/1200/1200') no-repeat center center / cover;
+        width: 100%;
+        padding: 0 0 100% 0;
+        order: 2;
+
+        @include mq(md) {
+          width: calc(50% - 10vw);
+          margin-right: 10vw;
+          padding: 0 0 50% 0;
+          order: 1;
+        }
+      }
+
+      &--cavas {
+        background: url('https://picsum.photos/id/235/1200/1200') no-repeat center center / cover;
+        width: 100%;
+        padding: 0 0 100% 0;
+        
+        @include mq(md) {
+          margin-left: 10vw;
+          padding: 0 0 50% 0;
+          width: calc(50% - 10vw);
+        }
+      }
+
+      &--tonel {
+        background: url('https://picsum.photos/id/232/1200/1200') no-repeat center center / cover;
+        width: 100%;
+        padding: 0 0 100% 0;
+        order: 2;
+
+        @include mq(md) {
+          width: calc(50% - 10vw);
+          margin-right: 10vw;
+          padding: 0 0 50% 0;
+          order: 1;
+        }
+      }
+
+      &--estrella {
+        background: url('https://picsum.photos/id/230/1200/1200') no-repeat center center / cover;
+        width: 100%;
+        padding: 0 0 100% 0;
+        
+        @include mq(md) {
+          margin-left: 10vw;
+          padding: 0 0 50% 0;
+          width: calc(50% - 10vw);
+        }
+      }
+    }
+
+    &__group {
+      width: calc(100% - 30px);
+      margin-right: auto;
+      margin-left: auto;
+      // padding: 100px 0;
+
+      @include mq(md) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        width: calc(100% - 10vw);
+        margin-right: 0;
+      }
+
+      &--right {
+        @include mq(md) {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+          width: calc(100% - 10vw);
+          margin-left: 0;
+        }
+      }
+    }
+
+    &__title {
+      color: $darkestGray;
+      font-family: $altFont;
+      font-size: 60px;
+      font-weight: 100;
+      transform: rotate(-5deg);
+      margin: 0;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      position: relative;
+      font-weight: 500;
+
+      @include mq(md) {
+        font-size: 110px;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 1px;
+        background: $darkBeige;
+        transform: rotate(5deg);
+      }
+
+      &--gray {
+        color: $lightGray;
+        font-size: 45px;
+        margin-bottom: 0px;
+        padding-bottom: px;
+
+        @include mq(md) {
+          font-size: 110px;
+        }
+
+  
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    &__subtitle {
+      position: relative;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      font-family: $titleFont;
+      text-transform: uppercase;
+      color: $lightGray;
+      font-weight: 100;
+      font-size: 26px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 1px;
+        background: $darkBeige;
+      }
+    }
+
+    &__text {
+      color: $darkGray;
+      text-transform: uppercase;
+      line-height: 1.7;
+      font-weight: 500;
+      font-size: 14px;
+
+      &--gray {
+        color: $lightGray;
+      }
+    }
+
+    &__button {
+      @include StyledButton('outline', $darkGray, $white);
+
+      svg {
+        width: 12px;
+      }
+
+      &--gray {
+        @include StyledButton('outline', $lightGray);
+      }
+    }
+  }
+}

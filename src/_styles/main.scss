@@ -21,6 +21,8 @@ body {
     overflow-x: hidden;
     width: 100vw;
     font-size: $sm;
+    color: $mainColor;
+    background: $white;
 }
 
 a {
@@ -33,7 +35,15 @@ a {
     }
 }
 
+button,
+input,
+textarea,
+a {
+  font-family: $mainFont;
+}
+
 ul {
+    font-family: $mainFont;
     list-style: none;
     padding: 0;
     margin: 0;

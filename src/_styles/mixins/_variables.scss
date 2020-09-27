@@ -8,8 +8,11 @@ $lightGray: #ebebeb;
 $lightestGray: #f4f7f8;
 $blue: #053f7a;
 $blueGray: #bbc9c9;
+$lightBeige: #F7F4EF;
+$midBeige: #FEE5C7;
+$darkBeige: #CA9255;
 
-$mainColor: $blue;
+$mainColor: $white;
 $link: $mainColor;
 $linkHover: $mainColor + #333;
 $text: $white;
@@ -35,4 +38,6 @@ $duration: 0.3s;
 $easing: cubic-bezier(.785, .135, .15, .86);
 $easingLight: ease;
 
-$mainFont: 'Open Sans', sans-serif;
+$mainFont: 'Futura', sans-serif;
+$altFont: 'Haigrast';
+$titleFont: 'Haigrast Serif';

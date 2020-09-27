@@ -1,0 +1,665 @@
+.historia {
+  position: relative;
+  overflow: hidden;
+  
+  &__hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 85vh;
+    padding: 0 15px;
+    background: url('/images/historia/hero.jpg') no-repeat center center / cover;
+    z-index: 6;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom:  0;
+      left:  0;
+      right:  0;
+      background: rgba(0,0,0,.35);
+    }
+  
+    @include mq(md) {
+      padding: 0;
+    }
+
+    &__wrapper {
+      display: inline-block;
+      position: relative;
+      z-index: 2;
+
+      img {
+        position: absolute;
+        bottom: -10px;
+        right: 0;
+        width: 100px;
+        transform: rotate(10deg);
+
+        @include mq(md) {
+          width: 250px;
+        }
+      }
+    }
+
+    &__title {
+      margin: 0;
+      color: $white;
+      font-family: $altFont;
+      font-size: 50px;
+      letter-spacing: 4px;
+      font-weight: 100;
+      text-align: center;
+      transform: rotate(-5deg);
+
+      @include mq(md) {
+        font-size: 180px;
+      }
+
+    }
+
+    &__social {
+      position: absolute;
+      left: 15px;
+      bottom: 15px;
+      display: flex;
+      z-index: 2;
+
+      @include mq(md) {
+        left: 5vw;
+        bottom: 5vw;
+      }
+
+      li {
+        margin-right: 10px;
+
+        @include mq(md) {
+          margin-right: 20px;
+        }
+
+        a {
+          text-decoration: none;
+
+          i {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &__timeline {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 15px;
+      width: 2px;
+      height: 100%;
+      background: $darkBeige;
+      
+      @include mq(md) {
+        transform: translateX(-50%);
+        left: 50%;
+      }
+    }
+
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding-top: 50px;
+      width: 100%;
+      background: $white;
+
+      @include mq(md) {
+        padding-top: 150px;
+      }
+
+      &--beige {
+        background: $lightBeige;
+      }
+
+      &--overflow-vertical {
+        @include mq(md) {
+          margin-top: -400px;
+          padding-top: 400px;
+          margin-bottom: -400px;
+          padding-bottom: 400px;
+        }
+      }
+
+      &--pad-top-xs {
+        padding-top: 5vw;
+      }
+
+      &--overflow-top {
+        margin-top: -5vw;
+      }
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: auto;
+      margin-right: auto;
+      width: calc(100% - 30px);
+      margin-bottom: 50px;
+      
+      @include mq(md) {
+        width: calc(100% - 20vw);
+        margin-bottom: 100px;
+      }
+
+      &--destacado {
+        background: $darkBeige;
+        width: 100%;
+        padding: 20px 0;
+        position: relative;
+        z-index: 3;
+
+        @include mq(md) {
+          padding: 6vw 0;
+          width: calc(100% - 20vw);
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background: rgba(0,0,0,.30);
+
+          @include mq(md) {
+            display: none;
+          }
+        }
+        .historia__timeline__milestone-title,
+        .historia__timeline__milestone-text {
+          text-align: center;
+          color: $white;
+          z-index: 5;
+        }
+
+        .historia__timeline__milestone {
+          padding: 0 5vw;
+
+          &:after {
+            display: none;
+          }
+        }
+      }
+
+      &--no-margin {
+        @include mq(md) {
+          margin-bottom: 0;
+        }
+      }
+
+      &--1997 {
+        background: url('/images/historia/1997.jpg') no-repeat center center / cover;
+      }
+
+      &--1999 {
+        background: url('/images/historia/1999.jpg') no-repeat right center / cover;
+        margin-bottom: 0;
+      }
+
+      &--2017 {
+        background: #D8B693;
+
+        @include mq(md) {
+          padding: 50px 50px 50px 5vw;
+        }
+      }
+
+      &--order-2-xs {
+        order: 2;
+
+        @include mq(md) {
+          order: 1;
+        }
+      }
+    }
+
+    &__milestones-wrapper {
+      width: 100%;
+      z-index: 5;
+
+      @include mq(md) {
+        width: 50%;
+      }
+
+      &--align-center {
+        display: flex;
+        align-items: center;
+      }
+
+      &--align-bottom {
+        @include mq(md) {
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+
+      &--order-1-xs {
+        order: 1;
+
+        @include mq(md) {
+          order: 2;
+        }
+      }
+    }
+
+    &__images-wrapper {
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding-left: 15px;
+
+      @include mq(md) {
+        width: 50%;
+        padding-left: 5vw;
+      }
+
+      &--align-left {
+        @include mq(md) {
+          align-items: flex-start;
+          padding-left: 0;
+          padding-right: 5vw;
+        }
+      }
+
+      &--align-top {
+        @include mq(md) {
+          align-items: flex-start;
+        }
+      }
+
+      &--order-2-xs {
+        order: 2;
+
+        @include mq(md) {
+          order: 1;
+        }
+      }
+    }
+
+    &__image {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+
+      img {
+        @include mq(md) {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        z-index: 4;
+        font-size: 20px;
+
+        @include mq(md) {
+          font-size: 80px;
+        }
+      }
+
+      &--bottle {
+        height: 100%;
+        max-height: 300px;
+
+        @include mq(md) {
+          max-height: 400px;
+        }
+
+        img {
+          position: static;
+          height: 100%;
+          width: auto;
+        }
+      }
+
+      &--bottle-left {
+        height: 100%;
+        max-height: 300px;
+
+        @include mq(md) {
+          max-height: 400px;
+        }
+
+        img {
+          display: block;
+          position: static;
+          height: 100%;
+          width: auto;
+          margin-right: auto;
+
+          @include mq(md) {
+            margin-left: auto;
+            margin-right: 0;
+         }
+        }
+      }
+
+      &--logo-left {
+        height: 100%;
+        max-height: 300px;
+
+        @include mq(md) {
+          max-height: 400px;
+        }
+
+        img {
+          display: block;
+          position: static;
+          width: 30%;
+          height: auto;
+          margin-right: auto;
+
+          @include mq(md) {
+            margin-left: auto;
+            margin-right: 0;
+            width: 40%;
+          }
+        }
+      }
+
+      &--logo {
+        height: 100%;
+        max-height: 300px;
+
+        @include mq(md) {
+          max-height: 400px;
+        }
+
+        img {
+          display: block;
+          position: static;
+          width: 30%;
+          height: auto;
+          margin-right: auto;
+          
+          @include mq(md) {
+            width: 40%;
+          }
+        }
+      }
+
+      &--top {
+        position: absolute;
+        top: -50px;
+        right: -15px;
+        width: calc(100% - 50px);
+        overflow: hidden;
+        height: 0;
+        padding-bottom: 60%;
+        z-index: 5;
+        cursor: pointer;
+
+        @include mq(md) {
+          top: 0;
+          transform: translateY(calc(-50% - 150px - 5vw));
+          right: -10vw;
+          width: calc(100% - 5vw);
+        }
+
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate3d(-50%, -50%, 0);
+          width: 100%;
+        }
+
+        i {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate3d(-50%, -50%, 0);
+          z-index: 4;
+          font-size: 20px;
+
+          @include mq(md) {
+            font-size: 60px;
+          }
+        }
+      }
+
+      &--right {
+        margin-left: 5vw;
+      }
+
+      &--overflow-top {
+        z-index: 5;
+        height: 100vw;
+
+        @include mq(md) {
+          height: calc(100% + 150px + 5vw);
+        }
+      }
+
+      &--overflow-bottom {
+        
+        @include mq(md) {
+          height: 100vw;
+          height: calc(100% + 100px + 5vw);
+        }
+
+        img {
+          width: 100%;
+
+          @include mq(md) {
+            position: absolute;
+            top: 0;
+            width: 100%;
+          }
+        }
+      }
+
+      &--overflow-bottom-xs {
+        @include mq(md) {
+          height: calc(100% + 5vw);
+        }
+      }
+
+      &--square {
+        @include mq(md) {
+          min-height: 350px;
+        }
+
+        img {
+          width: 100%;
+
+          @include mq(md) {
+
+          }
+        }
+      }
+
+      &--map {
+        height: 75vw;
+
+        @include mq(md) {
+          height: calc(100% + 100px + 5vw);
+        }
+      }
+    }
+
+    &__milestone {
+      width: 100%;
+      padding-left: 15px;
+      margin-bottom: 20px;
+      position: relative;
+
+      @include mq(md) {
+        padding-left: 5vw;
+        margin-bottom: 50px;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: -5px;
+        top: 20px;
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background: $darkBeige;
+        z-index: 3;
+
+        @include mq(md) {
+          left: -6px;
+        }
+      }
+
+      &--align-left {
+        padding-left: 15px;
+        
+        @include mq(md) {
+          text-align: right;
+          padding-left: 0;
+          padding-right: 5vw;
+        }
+
+        .historia__timeline__milestone-title {
+          &:after {
+            @include mq(md) {
+              right: 0;
+              left: auto;
+            }
+          }
+        }
+        
+        &:after {
+          @include mq(md) {
+            left: auto;
+            right: -6px;
+          }
+        }
+      }
+
+      &--first {
+        &:before {
+          content: '';
+          position: absolute;
+          left: -1px;
+          bottom: calc(100% - 20px);
+          height: 400px;
+          width: 4px;
+          background: $lightBeige;
+          z-index: 2;
+
+          @include mq(md) {
+            right: -3px;
+            left: auto;
+            bottom: calc(100% - 30px);
+          }
+        }
+      }
+
+      &--last {
+        &:before {
+          content: '';
+          position: absolute;
+          left: -1px;
+          top: 20px;
+          height: 1000px;
+          width: 4px;
+          background: $white;
+          z-index: 2;
+
+          @include mq(md) {
+            left: -3px;
+            top: 30px;
+          }
+        }
+      }
+
+
+      &--no-margin {
+        @include mq(md) {
+          margin-bottom: 0;
+        }
+      }
+
+      &--no-padding {
+        @include mq(md) {
+          padding: 0 !important;
+        }
+      }
+
+      &--margin-bottom-xl {
+        margin-bottom: 80px;
+
+        @include mq(md) {
+          margin-bottom: 50px;
+        }
+      }
+    }
+
+    &__milestone-title {
+      font-size: 50px;
+      color: $darkGray;
+      font-family: $titleFont;
+      position: relative;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+
+      @include mq(md) {
+        font-size: 80px;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 75px;
+        height: 1px;
+        background: $darkBeige;
+      }
+
+      &--destacado {
+        &:after {
+          left: 50%;
+          transform: translateX(-50%);
+          background: $white;
+        }
+      }
+    }
+
+    &__milestone-text {
+      color: $darkGray;
+      text-transform: uppercase;
+      line-height: 2;
+      letter-spacing: 1px;
+      margin: 0;
+      font-weight: 400;
+      font-size: 12px;
+
+      @include mq(md) {
+        font-size: 14px;
+      }
+
+      a {
+        color: $darkGray;
+        text-decoration: none;
+      }
+    }
+  }
+}

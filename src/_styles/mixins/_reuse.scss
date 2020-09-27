@@ -158,3 +158,88 @@
         }
     }
 }
+
+@mixin StyledButton($type: 'fill', $color: $white, $contrast: $darkestGray) {
+    display: inline-flex;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 40px;
+    color: $color;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: 500;
+
+    @include mq(md) {
+        
+    }
+
+    span {
+        letter-spacing: 4px;
+        font-size: 12px;
+        font-weight: 500;
+        margin-right: 20px;
+    }
+
+    img {
+        width: 16px;
+    }
+
+    svg {
+        width: 20px;
+
+        path {
+            @include trans;
+            fill: $color;
+        }
+    }
+
+    @if $type == 'fill' {
+        @include trans;
+
+        background: $color;
+        border: 1px solid $color;
+        color: $contrast;
+
+        &:hover {
+            background: $color - #111;
+            border: 1px solid $color - #111;
+        }
+    }
+
+    @if $type == 'outline' {
+        @include trans;
+
+        background: transparent;
+        border: 1px solid $color;
+        color: $color;
+
+        span {
+            @include trans;
+
+            color: $color;
+            font-size: 12px;
+        }
+
+        &:hover {
+            background: $color + #666;
+            border: 1px solid $color + #666;
+            color: $contrast;
+
+            span {
+                color: $contrast;
+            }
+
+            svg {
+                path {
+                    fill: $contrast;
+                }
+            }
+        }
+    }
+}

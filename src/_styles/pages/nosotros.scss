@@ -1,0 +1,420 @@
+.nosotros {
+  position: relative;
+  overflow: hidden;
+  
+  &__hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 80vh;
+    padding: 0 15px;
+    background: url('/images/nosotros/hero.jpg') no-repeat center center / cover;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom:  0;
+      left:  0;
+      right:  0;
+      background: rgba(0,0,0,.35);
+    }
+  
+    @include mq(md) {
+      padding: 0;
+    }
+
+    &__wrapper {
+      display: inline-block;
+      position: relative;
+      z-index: 2;
+
+      img {
+        position: absolute;
+        bottom: -10px;
+        right: 0;
+        width: 100px;
+        transform: rotate(10deg);
+
+        @include mq(md) {
+          width: 250px;
+        }
+      }
+    }
+
+    &__title {
+      margin: 0;
+      color: $white;
+      font-family: $altFont;
+      font-size: 50px;
+      letter-spacing: 4px;
+      font-weight: 100;
+      text-align: center;
+      transform: rotate(-5deg);
+
+      @include mq(md) {
+        font-size: 180px;
+      }
+
+    }
+
+    &__social {
+      position: absolute;
+      left: 15px;
+      bottom: 15px;
+      display: flex;
+      z-index: 2;
+
+      @include mq(md) {
+        left: 5vw;
+        bottom: 10vw;
+      }
+
+      li {
+        margin-right: 10px;
+
+        @include mq(md) {
+          margin-right: 20px;
+        }
+
+        a {
+          text-decoration: none;
+
+          i {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &__ubicacion {
+    background: $lightBeige;
+    padding-bottom: 50px;
+
+    @include mq(md) {
+      padding-bottom: 100px;
+    }
+
+    @include mq(md) {
+      margin-top: -5%;
+    }
+
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      margin-bottom: 50px;
+      
+      @include mq(md) {
+        margin-bottom: 20vh;
+      }
+    }
+
+    &__wrapper {
+      background: $lightBeige;
+      width: 100%;
+      
+      @include mq(md) {
+        height: 0;
+        overflow: hidden;
+        position: relative;
+      }
+
+      &:nth-child(1) {
+        
+        @include mq(md) {
+          padding-bottom: 40%;
+          width: 55%;
+        }
+      }
+
+      &:nth-child(2) {
+        background: url('/images/nosotros/familia.png') no-repeat center center / cover;
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+        overflow: hidden;
+        position: relative;
+      
+        @include mq(md) {
+          width: 45%;
+          padding-bottom: 35%;
+        }
+      }
+    }
+
+    &__wrapper-content {
+      width: calc(100% - 30px);
+      margin-left: auto;
+      margin-right: auto;
+      padding: 40px 0;
+
+      @include mq(md) {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 20vw);
+        padding: 0;
+      }
+    }
+
+    &__title {
+      font-family: $titleFont;
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: 100;
+      margin: 0;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      color: $darkGray;
+      position: relative;
+
+      @include mq(md) {
+        font-size: 26px;
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 100px;
+        background: $darkBeige;
+      }
+    }
+
+    &__text {
+      text-transform: uppercase;
+      color: $darkGray;
+      line-height: 2;
+      letter-spacing: 1px;
+      margin: 0;
+      font-size: 12px;
+      font-weight: 500;
+
+      @include mq(md) {
+        font-size: 14px;
+      }
+    }
+
+    &__group {
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(100% - 30px);
+      margin-left: auto;
+      margin-right: auto;
+
+      @include mq(md) {
+        width: calc(100% - 20vw);
+      }
+    }
+
+    &__group-wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      
+      &:nth-child(1) {
+        z-index: 1;
+        width: 100%;
+        
+        @include mq(md) {
+          width: 55%;
+
+        }
+      }
+      
+      &:nth-child(2) {
+        width: 100%;
+        padding-top: 130px;
+        
+        @include mq(md) {
+          padding-top: 300px;
+          width: 45%;
+        }
+      }
+    }
+
+    &__comment {
+      color: $darkGray;
+      margin: 0;
+      margin-bottom: 40px;
+      font-size: 14px;
+      font-style: italic;
+    }
+
+    &__image {
+      width: 100%;
+      overflow: hidden;
+      padding-right: 5vw;
+
+      img {
+        width: 100%;
+      }
+
+      .-small {
+        position: absolute;
+        width: 65%;
+        height: 25%;
+        bottom: -5%;
+        right: 0%;
+
+        @include mq(md) {
+          right: -40%;
+          top: -5%;
+          bottom: auto;
+          height: 20%;
+        }
+      }
+    }
+
+    &__subtitle {
+      font-family: $altFont;
+      font-size: 150px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) rotate(-5deg);
+      z-index: 0;
+      top: 0%;
+      
+      @include mq(md) {
+        top: 5%;
+        font-size: 280px;
+        left: 55%;
+      }
+    }
+
+    &__group-text {
+      margin: 0;
+      color: $darkGray;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 2;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 20px;
+      font-size: 12px;
+      font-weight: 500;
+
+      @include mq(md) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__bodega {
+    background: $white;
+    padding: 50px 0 0 0;
+
+    @include mq(md) {
+      padding: 100px 0;
+    }
+
+    &__title {
+      width: calc(100% - 30px);
+      text-transform: uppercase;
+      font-family: $titleFont;
+      color: $darkGray;
+      font-weight: 100;
+      text-align: center;
+      margin: 0;
+      margin-bottom: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 20px;
+      letter-spacing: 2px;
+      position: relative;
+      z-index: 1;
+
+      @include mq(md) {
+        font-size: 26px;
+        width: calc(100% - 35vw);
+        margin-bottom: 100px;
+      }
+    }
+
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__wrapper {
+      position: relative;
+      width: 100%;
+
+      @include mq(md) {
+        width: 50%;
+      }
+
+      &:nth-child(2) {
+        height: 0;
+        padding-bottom: 100%;
+        background: url('/images/nosotros/paisaje.jpg') no-repeat center center / cover;
+
+        @include mq(md) {
+          height: auto;
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    &__subtitle {
+      font-size: 150px;
+      font-family: $altFont;
+      color: $midBeige;
+      position: absolute;
+      top: 0;
+      left: 45%;
+      transform: translate3d(-50%, -50%, 0) rotate(-5deg);
+
+      @include mq(md) {
+        font-size: 300px;
+      }
+    }
+
+    &__content {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: right;
+      padding-top: 50px;
+      width: calc(100% - 30px);
+      padding-bottom: 50px;
+      
+      @include mq(md) {
+        margin-right: 0;
+        padding-right: 5vw;
+        padding-top: 100px;
+        padding-bottom: 0;
+        width: 60%;
+      }
+    }
+
+    &__text {
+      color: $darkGray;
+      letter-spacing: 2px;
+      line-height: 2;
+      font-weight: 500;
+      text-align: right;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin: 0;
+      margin-bottom: 50px;
+      position: relative;
+      z-index: 1;
+
+      @include mq(md) {
+        font-size: 14px;
+      }
+    }
+
+    &__button {
+      @include StyledButton('outline', $darkGray, $white)
+    }
+  }
+}

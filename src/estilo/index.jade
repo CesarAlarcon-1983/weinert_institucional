@@ -1,0 +1,41 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+  main.estilo
+    section.estilo__hero
+      div.estilo__hero__wrapper
+        h1.estilo__hero__title Estilo
+        img(src="/images/underline.png")
+      span.estilo__hero__text Si está planeando un viaje a mendoza,<br> nos encantaría que nos visite
+      ul.estilo__hero__social
+        li
+          a(href="#" target="_blank")
+            i.fab.fa-facebook-f
+        li
+          a(href="#" target="_blank")
+            i.fab.fa-instagram
+        li
+          a(href="#" target="_blank")
+            i.fab.fa-twitter
+
+    section.estilo__map
+      button.estilo__map__scroll-button
+        img(src="/images/arrows.svg")        
+      each info, index in site.data.estiloInfo
+        div.estilo__map__info(data-content=index)
+          button.estilo__map__close-button
+          div.estilo__map__info-content
+            h2.estilo__map__info-title=info.title
+            p.estilo__map__info-text=info.text
+          div.estilo__map__info-image
+            img(src=info.img)
+      div.estilo__map__container
+        div.estilo__map__wrapper
+          img(src="/images/estilo/plano.jpg")
+          each info, index in site.data.estiloInfo
+            button.estilo__map__dot(data-target=index)
+

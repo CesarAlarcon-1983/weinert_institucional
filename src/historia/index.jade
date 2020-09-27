@@ -1,0 +1,250 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+  main.historia
+    section.historia__hero
+      div.historia__hero__wrapper
+        h1.historia__hero__title Historia
+        img(src="/images/underline.png")
+      ul.historia__hero__social
+        li
+          a(href="#" target="_blank")
+            i.fab.fa-facebook-f
+        li
+          a(href="#" target="_blank")
+            i.fab.fa-instagram
+        li
+          a(href="#" target="_blank")
+            i.fab.fa-twitter
+    section.historia__timeline
+      div.historia__timeline__container.historia__timeline__container--beige
+        div.historia__timeline__wrapper
+          div.historia__timeline__milestones-wrapper
+            div.historia__timeline__milestone.historia__timeline__milestone--align-left.historia__timeline__milestone--first
+              div.historia__timeline__milestone-title 1890
+              div.historia__timeline__milestone-text Se construye la bodega de manos de la familia Otero que la bautizan de bodega fontán. El estilo arquitectónico sigue un estilo neoclassico ecléctico con influencias italianas en la utilización de grandes piedras y bóvedas de ladrillos en las cavas.
+            div.historia__timeline__milestone.historia__timeline__milestone--align-left.historia__timeline__milestone--margin-bottom-xl
+              div.historia__timeline__milestone-title 1920
+              div.historia__timeline__milestone-text Bodega Fontán deja de producir sus vinos y el edificio se abandona como productora de vinos.
+          div.historia__timeline__images-wrapper
+            div.historia__timeline__image.historia__timeline__image--overflow-top
+              img(src="/images/historia/1890-1920.jpg")
+            div.historia__timeline__image.historia__timeline__image--top
+              img.-small(src="/images/historia/video.jpg")
+              i.fas.fa-play
+        div.historia__timeline__wrapper
+          div.historia__timeline__images-wrapper.historia__timeline__images-wrapper--order-2-xs.historia__timeline__images-wrapper--align-left
+            div.historia__timeline__image.historia__timeline__image--overflow-bottom
+              img(src="/images/historia/1970-1975.jpg")
+          div.historia__timeline__milestones-wrapper.historia__timeline__milestones-wrapper--order-1-xs
+            div.historia__timeline__milestone
+              div.historia__timeline__milestone-title 1970 - 1975
+              div.historia__timeline__milestone-text Don bernardo C. Weinert comienza a frecuentar mendoza como un empresario de transportes brasileño y se enamora del edificio ubicado en Carrodilla, entablando la forma de comprarla para revitalizar la bodega. En ese período conoce a don raúl de la mota quien le comenta de sus ideas para producir vinos de alta calidad en mendoza y su amor por la uva malbec, una uva en aquella época considerada de segunda categoría y usada como uva tintera de cortes.
+
+      div.historia__timeline__container
+        div.historia__timeline__wrapper
+          div.historia__timeline__milestones-wrapper
+            div.historia__timeline__milestone.historia__timeline__milestone--align-left
+              div.historia__timeline__milestone-title 1975 - 1977
+              div.historia__timeline__milestone-text Junto a don raúl de la mota comienza la reconstrucción de la bodega, transformándola en un ícono para la producción de vinos de alta gama con la mejor tecnología de aquella época. Muchos toneles de la bodega el globo y giol son comprados para conformar la colección de 233 toneles, entre ellos un tonel de 44.000 litros armado por la tonnellerie Adolph Fruhinholz a fines de 1800 originario del imperio austro-húngaro.
+          div.historia__timeline__images-wrapper
+            div.historia__timeline__image
+              img(src="/images/historia/1975-1977.jpg")
+        div.historia__timeline__wrapper
+          div.historia__timeline__images-wrapper.historia__timeline__images-wrapper--align-left.historia__timeline__images-wrapper--order-2-xs
+            div.historia__timeline__image.historia__timeline__image--overflow-bottom
+              img(src="/images/historia/1977.jpg")
+          div.historia__timeline__milestones-wrapper.historia__timeline__milestones-wrapper--order-1-xs
+            div.historia__timeline__milestone
+              div.historia__timeline__milestone-title 1977
+              div.historia__timeline__milestone-text Se hace la primera cosecha de Weinert con cosecha manual en cajas de 20 KG, algo inusitado en quellos tiempos.
+
+      div.historia__timeline__container.historia__timeline__container--beige.historia__timeline__container--pad-top-xs
+        div.historia__timeline__wrapper
+          div.historia__timeline__milestones-wrapper.historia__timeline__milestones-wrapper--align-center
+            div.historia__timeline__milestone.historia__timeline__milestone--align-left
+              div.historia__timeline__milestone-title 1979
+              div.historia__timeline__milestone-text Son lanzados los vinos Carrascal tinto, Weinert Cabernet Sauvignon y cavas de Weinert, todos de la cosecha 1977.
+          div.historia__timeline__images-wrapper
+            div.historia__timeline__image.historia__timeline__image--bottle
+              img(src="/images/historia/1979.png")
+        div.historia__timeline__wrapper
+          div.historia__timeline__images-wrapper.historia__timeline__images-wrapper--align-left.historia__timeline__images-wrapper--order-2-xs
+            div.historia__timeline__image.historia__timeline__image--overflow-bottom
+              img(src="/images/historia/1980.jpg")
+          div.historia__timeline__milestones-wrapper.historia__timeline__milestones-wrapper--order-1-xs
+            div.historia__timeline__milestone
+              div.historia__timeline__milestone-title 1980
+              div.historia__timeline__milestone-text Es lanzado el primer malbec varietal de alta calidad en Argentina, el Weinert Malbec 1977 reserva espacial. Los periodistas creen que malbec es una marca, no una variedad de uva.
+
+      div.historia__timeline__container.historia__timeline__container--pad-top-xs
+        div.historia__timeline__wrapper.historia__timeline__wrapper--no-margin
+          div.historia__timeline__milestones-wrapper.historia__timeline__milestones-wrapper--align-center
+            div.historia__timeline__milestone.historia__timeline__milestone--align-left
+              div.historia__timeline__milestone-title 1982
+              div.historia__timeline__milestone-text Es lanzado el primer Weinert Merlot de cosecha 1980.
+          div.historia__timeline__images-wrapper
+            div.historia__timeline__image.historia__timeline__image--bottle
+              img(src="/images/historia/1982.png")
+        div.historia__timeline__wrapper.historia__timeline__wrapper--no-margin
+          div.historia__timeline__images-wrapper.historia__timeline__images-wrapper--align-left.historia__timeline__images-wrapper--order-2-xs
+            div.historia__timeline__image.historia__timeline__image--overflow-bottom-xs.historia__timeline__image--bottle-left
+              img(src="/images/historia/1989.png")
+          div.historia__timeline__milestones-wrapper.historia__timeline__milestones-wrapper--align-center.historia__timeline__milestones-wrapper--order-1-xs
+            div.historia__timeline__milestone
+              div.historia__timeline__milestone-title 1989
+              div.historia__timeline__milestone-text Weinert Cabernet Sauvignon 1983 gana medalla de oro en el wine & spirits international competition y se vuelve el primer vino argentino en ganarla.
+
+      div.historia__timeline__container.historia__timeline__container--beige.historia__timeline__container--overflow-top
+        div.historia__timeline__wrapper
+          div.historia__timeline__milestones-wrapper
+            div.historia__timeline__milestone.historia__timeline__milestone--align-left
+              div.historia__timeline__milestone-title 1990
+              div.historia__timeline__milestone-text Nace el primer Weinert estrella, un Cabernet Sauvignon cosecha 1979 proveniente de Agrelo. El mercado japonés lo absorve casi que instantáneamente. 
+          div.historia__timeline__images-wrapper
+            div.historia__timeline__image.historia__timeline__image--square
+              img(src="/images/historia/1990.jpg")
+        div.historia__timeline__wrapper
+          div.historia__timeline__images-wrapper.historia__timeline__images-wrapper--align-left.historia__timeline__images-wrapper--order-2-xs
+            div.historia__timeline__image.historia__timeline__image--overflow-bottom-xs
+              img(src="/images/historia/1992.jpg")
+          div.historia__timeline__milestones-wrapper.historia__timeline__milestones-wrapper--order-1-xs
+            div.historia__timeline__milestone
+              div.historia__timeline__milestone-title 1992
+              div.historia__timeline__milestone-text Robert Parker Jr. recibe muestras de los vinos de mano de un amigo inglés y menciona a bodega Weinert y Argentina como región productora por primera vez en su guía de vinos.
+
+      div.historia__timeline__container.historia__timeline__container--overflow-top
+        div.historia__timeline__wrapper.historia__timeline__wrapper--no-margin
+          div.historia__timeline__milestones-wrapper
+            div.historia__timeline__milestone.historia__timeline__milestone--align-left
+              div.historia__timeline__milestone-title 1993
+              div.historia__timeline__milestone-text Don bernardo C. Weinert es considerado wine personality of the year en el wine advocate, guía de Robert Parker. 
+          div.historia__timeline__images-wrapper
+            div.historia__timeline__image.historia__timeline__image--square
+              img(src="/images/historia/1993.jpg")
+        div.historia__timeline__wrapper
+          div.historia__timeline__images-wrapper.historia__timeline__images-wrapper--align-left.historia__timeline__images-wrapper--order-2-xs
+            div.historia__timeline__image.historia__timeline__image--square
+              img(src="/images/historia/1996.jpg")
+          div.historia__timeline__milestones-wrapper.historia__timeline__milestones-wrapper--align-bottom.historia__timeline__milestones-wrapper--order-1-xs
+            div.historia__timeline__milestone.historia__timeline__milestone--no-margin
+              div.historia__timeline__milestone-title 1996
+              div.historia__timeline__milestone-text Hubert Weber, un joven estudiante de enología en suiza, es invitado a degustar el cavas de Weinert 1985 y, impresionado con la complejidad del vino, solicita hacer una pasantia de cosecha en mendoza a Lidia Zuberbuhler, importadora de los vinos en el país alpino.
+
+        div.historia__timeline__wrapper.historia__timeline__wrapper--destacado.historia__timeline__wrapper--1997
+          div.historia__timeline__milestones-wrapper
+            div.historia__timeline__milestone.historia__timeline__milestone--no-margin
+              div.historia__timeline__milestone-title.historia__timeline__milestone-title--destacado 1997
+              div.historia__timeline__milestone-text Nace la segunda Weinert estrella, un corte de 4 toneles de malbec 1977 luego de una crianza de 19 años en toneles. Hubert Weber llega a mendoza en un caluroso enero hablando inglés, alemán, francés y dialecto suizo. Durante el años de 96 se instala en mendoza definitivamente.
+          
+      div.historia__timeline__container.historia__timeline__container--beige.historia__timeline__container--overflow-vertical
+        div.historia__timeline__wrapper
+          div.historia__timeline__images-wrapper.historia__timeline__images-wrapper--align-left.historia__timeline__images-wrapper--order-2-xs
+            div.historia__timeline__image.historia__timeline__image--bottle-left
+              img(src="/images/historia/1998.png")
+          div.historia__timeline__milestones-wrapper.historia__timeline__milestones-wrapper--order-1-xs
+            div.historia__timeline__milestone
+              div.historia__timeline__milestone-title 1998
+              div.historia__timeline__milestone-text El primer cosecha de otoño es producido a partir de la uva Sauvignon Blanc, un vino dulce natural sin Botritis originario de la sobremaduración y deshidratación del vino en la vid.
+      div.historia__timeline__wrapper.historia__timeline__wrapper--destacado.historia__timeline__wrapper--1999
+        div.historia__timeline__milestones-wrapper
+          div.historia__timeline__milestone
+            div.historia__timeline__milestone-title.historia__timeline__milestone-title--destacado 1999
+            div.historia__timeline__milestone-text Weinert ingresa al monopolio estatal de Noruega Vinmonopolet representada por Petter Wulff, <a href="http://www.momentum.no" target="_blank">www.momentum.no</a> iniciando una larga y exitosa relación comercial en el país nórdico.
+
+      div.historia__timeline__container.historia__timeline__container--overflow-top
+        div.historia__timeline__wrapper.historia__timeline__wrapper--no-margin
+          div.historia__timeline__milestones-wrapper
+            div.historia__timeline__milestone.historia__timeline__milestone--align-left
+              div.historia__timeline__milestone-title 2001
+              div.historia__timeline__milestone-text Se lanza el cavas de Weinert 1997 magnun, primer cosecha de Hubert Weber como primer enólogo, quien ajusta la composición varietal del vino equilibrando los porcentajes de malbec y Cabernet Sauvignon para aumentar el potencial de guarda en botella del mismo.
+          div.historia__timeline__images-wrapper.historia__timeline__images-wrapper--align-top
+            div.historia__timeline__image.historia__timeline__image--overflow-bottom-xs.historia__timeline__image--bottle
+              img(src="/images/historia/2001.png")
+
+      div.historia__timeline__container.historia__timeline__container--beige.historia__timeline__container--overflow-top
+        div.historia__timeline__wrapper
+          div.historia__timeline__images-wrapper.historia__timeline__images-wrapper--align-left.historia__timeline__images-wrapper--order-2-xs
+            div.historia__timeline__image.historia__timeline__image--logo-left
+              img(src="/images/historia/2001-2.png")
+          div.historia__timeline__milestones-wrapper.historia__timeline__milestones-wrapper--order-1-xs
+            div.historia__timeline__milestone
+              div.historia__timeline__milestone-title 2001
+              div.historia__timeline__milestone-text Weinert es seleccionada para integrar el portfolio de Broadbent selections INC. <a href="http://www.broadbent.com" target="_blank">www.broadbent.com</a> como importador en EUA, una de las top 5 importadoras del país y considerado uno de los portfolios más prestigiosos del mercado americano.
+        div.historia__timeline__wrapper
+          div.historia__timeline__milestones-wrapper
+            div.historia__timeline__milestone.historia__timeline__milestone--align-left
+              div.historia__timeline__milestone-title 2005
+              div.historia__timeline__milestone-text weinert ingresa al mercado de china representada por Shirley tan quien luego se tornaría una de las mujeres más importantes del país asiatico, llevando a la prestigiosa revista Decanter a su edición en mandarín.
+          div.historia__timeline__images-wrapper.historia__timeline__images-wrapper--align-top
+            div.historia__timeline__image.historia__timeline__image--overflow-bottom.historia__timeline__image--map
+              img(src="/images/historia/2005.png")
+
+      div.historia__timeline__container
+        div.historia__timeline__wrapper
+          div.historia__timeline__images-wrapper.historia__timeline__images-wrapper--align-left.historia__timeline__images-wrapper--order-2-xs
+            div.historia__timeline__image.historia__timeline__image--logo-left
+              img(src="/images/historia/2006.png")
+          div.historia__timeline__milestones-wrapper.historia__timeline__milestones-wrapper--order-1-xs
+            div.historia__timeline__milestone
+              div.historia__timeline__milestone-title 2006
+              div.historia__timeline__milestone-text Weinert ingresa al portfolio de Pacific Wines & Spirits <a href="http://www.pacificwinesandspirits.com" target="_blank">www.pacificwinesandspirits.com</a>, presitigoso agente del centro-oeste de canadá.
+        div.historia__timeline__wrapper.historia__timeline__wrapper--no-margin
+          div.historia__timeline__milestones-wrapper
+            div.historia__timeline__milestone.historia__timeline__milestone--align-left
+              div.historia__timeline__milestone-title 2008
+              div.historia__timeline__milestone-text Lanzamiento del cuarto vino de la colección Weinert estrella: el merlot 1999 de anchoris-valle de uco. Para la ocasión se produjo el video.
+          div.historia__timeline__images-wrapper.historia__timeline__images-wrapper--align-top
+            div.historia__timeline__image.historia__timeline__image--overflow-bottom
+              img(src="/images/historia/2008.jpg")
+              i.fas.fa-play
+
+      div.historia__timeline__container.historia__timeline__container--beige.historia__timeline__container--pad-top
+        div.historia__timeline__wrapper
+          div.historia__timeline__images-wrapper.historia__timeline__images-wrapper--align-left.historia__timeline__images-wrapper--order-2-xs
+            div.historia__timeline__image.historia__timeline__image--bottle-left
+              img(src="/images/historia/2011.png")
+          div.historia__timeline__milestones-wrapper.historia__timeline__milestones-wrapper--align-center.historia__timeline__milestones-wrapper--order-1-xs
+            div.historia__timeline__milestone.historia__timeline__milestone--no-margin
+              div.historia__timeline__milestone-title 2011
+              div.historia__timeline__milestone-text Lanzamiento del quinto vino de la colección Weinert estrella: el malbec 1994 de finca de la región.
+        div.historia__timeline__wrapper
+          div.historia__timeline__milestones-wrapper
+            div.historia__timeline__milestone.historia__timeline__milestone--align-left
+              div.historia__timeline__milestone-title 2014
+              div.historia__timeline__milestone-text Las etiquetas de la línea Carrascal son rediseñadas y se expande el portfolio con los varierales chardonnay, malbec y Cabernet Sauvignon de la cosecha 2012 además del tradicional corte tinto.
+          div.historia__timeline__images-wrapper.historia__timeline__images-wrapper--align-top
+            div.historia__timeline__image.historia__timeline__image--overflow-bottom
+              img(src="/images/historia/2014.png")
+
+      div.historia__timeline__container
+        div.historia__timeline__wrapper.historia__timeline__wrapper--destacado.historia__timeline__wrapper--2017
+          div.historia__timeline__images-wrapper.historia__timeline__images-wrapper--align-left
+            div.historia__timeline__image.historia__timeline__image--bottle
+              img(src="/images/historia/2017.png")
+          div.historia__timeline__milestones-wrapper
+            div.historia__timeline__milestone.historia__timeline__milestone--no-margin.historia__timeline__milestone--no-padding
+              div.historia__timeline__milestone-title.historia__timeline__milestone-title--destacado 2017
+              div.historia__timeline__milestone-text Bajo el liderazgo de la segunda generación de la familia representada por iduna weinert, lanza el primer vino de la nueva línea tonel único, un malbec 1994 de vistalba - luján de cuyo con venta en primeur a the wine society <a href="http://www.thewinesociety.co.uk">www.thewinesociety.co.uk</a>, club de vinos de inglaterra considerado uno de los más prestigiosos del mundo. Es el vino con más tiempo de añejamiento en un tonel hasta la fecha: el tonel #111 de 6mil litros durante 23 años de crianza.
+
+        div.historia__timeline__wrapper
+          div.historia__timeline__milestones-wrapper
+            div.historia__timeline__milestone.historia__timeline__milestone--align-left
+              div.historia__timeline__milestone-title 2018
+              div.historia__timeline__milestone-text Se obtiene la certificación orgánica de letis.
+          div.historia__timeline__images-wrapper
+            div.historia__timeline__image.historia__timeline__image--logo
+              img(src="/images/historia/2018.png")
+        div.historia__timeline__wrapper
+          div.historia__timeline__images-wrapper.historia__timeline__images-wrapper--align-left.historia__timeline__images-wrapper--order-2-xs
+            div.historia__timeline__image.historia__timeline__image--logo-left
+              img(src="/images/historia/2020.png")
+          div.historia__timeline__milestones-wrapper.historia__timeline__milestones-wrapper--order-1-xs
+            div.historia__timeline__milestone.historia__timeline__milestone--last
+              div.historia__timeline__milestone-title 2020
+              div.historia__timeline__milestone-text Marcando los 45 años de la empresa, se inicia la certificación fair for life buscando profundizar el compromiso de la bodega con sus colaboradores y pequeños viñateros de la región de lujan de cuyo y maipú.
+

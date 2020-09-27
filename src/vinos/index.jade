@@ -1,0 +1,79 @@
+extends ../_layouts/base
+
+include ../_images/shopping-bag
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+  main.vinos
+    section.vinos__hero
+      div.vinos__hero__wrapper
+        h1.vinos__hero__title Vinos
+        img(src="/images/underline.png")
+      span.vinos__hero__text Íconos de elegancia y estilo
+      ul.vinos__hero__social
+        li
+          a(href="#" target="_blank")
+            i.fab.fa-facebook-f
+        li
+          a(href="#" target="_blank")
+            i.fab.fa-instagram
+        li
+          a(href="#" target="_blank")
+            i.fab.fa-twitter
+
+    section.vinos__content
+      div.vinos__content__container.vinos__content__container--beige
+        div.vinos__content__wrapper
+          div.vinos__content__group
+            h2.vinos__content__title Carrascal
+            p.vinos__content__text Bautizado con el nombre de un barrio histórico de mendoza donde se fabrican botellas para la industria de vino en el siglo XIX, la línea carrascal refleja la jovialidad y potencia de la fruta de mendoza domada por la crianza de entre 18 y 36 meses en grandes toneles de roble francés de entre 2.500 y 6.000 litros.
+            a.vinos__content__button(href="#")
+              span  ver mas
+              +shopping-bag()
+        div.vinos__content__wrapper.vinos__content__wrapper--overflow
+
+      div.vinos__content__container
+        div.vinos__content__wrapper.vinos__content__wrapper--weinert
+        div.vinos__content__wrapper.vinos__content__wrapper--order
+          div.vinos__content__group.vinos__content__group--right
+            h2.vinos__content__title Weinert
+            p.vinos__content__text Bautizado con el nombre de un barrio histórico de mendoza donde se fabrican botellas para la industria de vino en el siglo XIX, la línea carrascal refleja la jovialidad y potencia de la fruta de mendoza domada por la crianza de entre 18 y 36 meses en grandes toneles de roble francés de entre 2.500 y 6.000 litros.
+            a.vinos__content__button(href="#")
+              span  ver mas
+              +shopping-bag()
+
+      div.vinos__content__container.vinos__content__container--gray
+        div.vinos__content__wrapper
+          div.vinos__content__group
+            h2.vinos__content__title.vinos__content__title--gray Cavas de Weinert
+            h3.vinos__content__subtitle Cash selection
+            p.vinos__content__text.vinos__content__text--gray Refleja la filosofía de la bodega buscando la elegancia y armonía entre las uvas Cabernet Sauvignon, malbec y merlot. Durante la crianza de cada varietal los mejores toneles son seleccionados para el cavas de weinert, buscando la firmeza y estructura de Cabernet Sauvignon, la expresión de fruta y cuerpo del malbec, y la femineidad y sutileza de merlot. Vinos elegantes sublimes y atemporales.
+            a.vinos__content__button.vinos__content__button--gray(href="#")
+              span  ver mas
+              +shopping-bag()
+        div.vinos__content__wrapper.vinos__content__wrapper--cavas
+
+      div.vinos__content__container.vinos__content__container--beige
+        div.vinos__content__wrapper.vinos__content__wrapper--tonel
+        div.vinos__content__wrapper.vinos__content__wrapper--order
+          div.vinos__content__group.vinos__content__group--right
+            h2.vinos__content__title Tonel Único
+            p.vinos__content__text Refleja la conjunción de vinos single vineyard de las mejores y más anntiguas fincas, con la personalidad de cada tonel en nuestra colección de mas de 230 que reposan en las cavas subterráneas, ediciones limitadas y lotes especiales, una colección de diferentes terroirs y el arte de la guarda en el tonel.
+            a.vinos__content__button(href="#")
+              span  ver mas
+              +shopping-bag()
+
+      div.vinos__content__container
+        div.vinos__content__wrapper
+          div.vinos__content__group
+            h2.vinos__content__title Estrella
+            p.vinos__content__text La figura de la estrella representa la prefecta armonía entre los cinco elementos que se conjugaran para crear grandes vinos: suelo, clima, viñedo, arte enológico y el alma de la bodega. Originarios de la mágica transformación de los varietales durante su vida y evolución en grandes toneles de roble francés, las estrellas nacen, uno no las hace. Una constelación sorprendente que el mundo de los vinos clásicos nos puede brindar. 
+            a.vinos__content__button(href="#")
+              span  ver mas
+              +shopping-bag()
+        div.vinos__content__wrapper.vinos__content__wrapper--estrella
+
+

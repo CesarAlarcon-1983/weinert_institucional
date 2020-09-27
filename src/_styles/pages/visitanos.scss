@@ -1,0 +1,504 @@
+.visitanos {
+  overflow: hidden;
+
+  &__hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    min-height: 80vh;
+    padding: 0 15px;
+    background: url('https://picsum.photos/id/236/1200/1200') no-repeat center center / cover;
+    z-index: 1;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, .35);
+    }
+
+    @include mq(md) {
+      padding: 0;
+    }
+
+    &__wrapper {
+      position: relative;
+      z-index: 2;
+
+      img {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 150px;
+        transform: rotate(10deg);
+
+        @include mq(md) {
+          top: 170px;
+        }
+      }
+    }
+
+    &__title {
+      margin: 0;
+      color: $white;
+      font-family: $altFont;
+      font-size: 90px;
+      letter-spacing: 4px;
+      font-weight: 100;
+      text-align: center;
+      transform: rotate(-5deg);
+      margin-bottom: 20px;
+
+      @include mq(md) {
+        font-size: 200px;
+        margin-bottom: 0;
+      }
+    }
+
+    &__text {
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 22px;
+      font-family: $titleFont;
+      margin: 0;
+      width: 100%;
+      display: block;
+      color: $white;
+      z-index: 1;
+
+      @include mq(md) {
+        font-size: 30px;
+      }
+
+    br {
+      display: none;
+
+        @include mq(md) {
+          display: block;
+        }
+      }
+    }
+
+    &__social {
+      position: absolute;
+      left: 15px;
+      bottom: 15px;
+      display: flex;
+      z-index: 2;
+
+      @include mq(md) {
+        left: 5vw;
+        bottom: 5vw;
+      }
+
+      li {
+        margin-right: 10px;
+
+        @include mq(md) {
+          margin-right: 20px;
+        }
+
+        a {
+          text-decoration: none;
+
+          i {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &__degustaciones {
+    padding: 100px 0 0 0;
+    background: $lightBeige;
+
+    @include mq(md) {
+      padding: 150px 0;
+    }
+
+    &__container {
+      width: calc(100% - 30px);
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-wrap: nowrap;
+      position: relative;
+      z-index: 2;
+      margin-bottom: 50px;
+
+      @include mq(md) {
+        width: calc(100% - 20vw);
+        margin-bottom: 150px;
+      }
+    }
+
+    &__container-wrapper {
+      height: 0;
+      padding-bottom: 100%;
+      overflow: hidden;
+
+      @include mq(md) {
+        padding-bottom: 50%;
+      }
+
+      &:nth-child(1) {
+        background: url('https://picsum.photos/id/235/1200/1200') no-repeat center center / cover;
+        width: 75%;
+
+        @include mq(md) {
+          width: 75%;
+        }
+      }
+
+      &:nth-child(2) {
+        background: url('https://picsum.photos/id/234/1200/1200') no-repeat center center / cover;
+        width: 50%;
+        position: absolute;
+        right: 0;
+        bottom: 50px;
+
+        @include mq(md) {
+          width: 50%;
+          padding-bottom: calc(50% + 5vw);
+          bottom: 150px;
+        }
+      }
+    }
+
+    &__group {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__group-wrapper {
+      min-height: 100%;
+      position: relative;
+      
+      &:nth-child(1) {
+        z-index: 2;
+        width: 100%;
+        background: url('https://picsum.photos/id/233/1200/1200') no-repeat center center / cover;
+        height: 0;
+        padding-bottom: 100%;
+        order: 2;
+
+        @include mq(md) {
+          padding-bottom: 0;
+          height: auto;
+          width: 40%;
+          order: 1;
+        }
+      }
+
+      &:nth-child(2) {
+        width: 100%;
+        order: 1;
+        
+        @include mq(md) {
+          width: 60%;
+          order: 2;
+        }
+      }
+    }
+
+    &__content {
+      padding: 100px 15px 50px 15px;
+      position: relative;
+
+      @include mq(md) {
+        padding: 120px 10vw 50px 10vw;
+      }
+    }
+
+    &__title-wrapper {
+      position: absolute;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      top: 0;
+      z-index: 1;
+
+      @include mq(md) {
+        left: 40%;
+        transform: translate3d(-50%, -55%, 0);
+      }
+    }
+
+    &__title {
+      font-size: 80px;
+      font-family: $altFont;
+      font-weight: 100;
+      transform: rotate(-5deg);
+      margin: 0;
+
+      @include mq(md) {
+        font-size: 180px;
+      }
+    }
+
+    &__text {
+      text-transform: uppercase;
+      font-family: $titleFont;
+      font-size: 20px;
+      text-align: center;
+      line-height: 1.5;
+      letter-spacing: 2px;
+      font-weight: 100;
+      color: $darkGray;
+      margin: 0;
+      position: relative;
+
+      @include mq(md) {
+        font-size: 26px;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 1px;
+        background: $darkBeige;
+      }
+    }
+  }
+
+  &__ubicacion {
+    position: relative;
+    z-index: 2;
+
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    &__form {
+      width: 100%;
+      padding: 50px 15px;
+      background: $white;
+
+      @include mq(md) {
+        display: flex;
+        align-items: center;
+        height: 55vw;
+        width: 50%;
+        padding: 0 10vw;
+      }
+    }
+
+    &__form-text {
+      color: $darkGray;
+      font-weight: 400;
+      font-size: 18px;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    &__form-disclaimer {
+      font-weight: 400;
+      color: $darkGray;
+      font-size: 14px;
+      margin: 0;
+      margin-bottom: 30px;
+      display: block;
+    }
+
+    &__form-group {
+      width: 100%;
+      position: relative;
+  
+      &:not(:last-child) {
+          margin-bottom: 10px;
+      }
+
+      &--select {
+        &:after {
+          content: '';
+          position: absolute;
+          right: 2px;
+          top: 50%;
+          transform: translateY(-50%) rotate(45deg);
+          width: 7px;
+          height: 7px;
+          border-bottom: 1px solid $darkGray;
+          border-right: 1px solid $darkGray;
+          pointer-events: none;
+        }
+      }
+
+
+      &--button {
+        margin-top: 30px;
+      }
+    }
+
+    &__form-input {
+      border: none;
+      border-bottom: 1px solid $darkGray;
+      width: 100%;
+      height: 100%;
+      background: none;
+      font-size: 20px;
+      padding: 0;
+      outline: none;
+      color: $darkGray;
+      caret-color: $darkGray;
+      z-index: 1;
+      position: relative;
+      height: 50px;
+  
+      &:focus {
+          padding-top: 20px;
+  
+          & + label {
+            color: $darkBeige;
+            top: 7px;
+            font-size: 14px;
+          }
+      }
+  
+      &::placeholder {
+          opacity: 0;
+      }
+  
+      &:not(:placeholder-shown) {
+          padding-top: 15px;
+  
+          + label {
+              color: $darkBeige;
+              top: 7px;
+              font-size: 14px;
+          }
+      }
+
+      &--textarea {
+        @include trans;
+      }
+    }
+
+    &__form-label {
+      @include trans;
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+      font-size: 16px;
+      transform: translateY(-50%);
+      color: $darkGray;
+      z-index: 2;
+      pointer-events: none;
+      margin: 0;
+      font-weight: 400;
+    }
+
+    &__form-select {
+      -webkit-appearance: none;
+      border: none;
+      border-bottom: 1px solid $darkGray;
+      width: 100%;
+      height: 50px;
+      color: $darkGray;
+      font-family: $mainFont;
+      font-weight: 100;
+      cursor: pointer;
+      font-weight: 400;
+    }
+
+    &__form-button  {
+      @include StyledButton('outline', $darkGray, $white);
+    }
+
+    &__map {
+      width: 100%;
+      padding-bottom: 100%;
+      height: 0;
+      position: relative;
+
+      @include mq(md) {
+        width: 50%;
+        padding-bottom: 50%;
+      }
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    }
+  }
+
+  &__distribucion {
+    background: url('https://picsum.photos/id/232/1200/1200') no-repeat center center / cover;
+    padding: 50px 0;
+    margin-top: -5%;
+    position: relative;
+    z-index: 1;
+
+    @include mq(md) {
+      padding: 200px 0;
+    }
+
+    &__content {
+      width: calc(100% - 30px);
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+
+      @include mq(md) {
+        width: 50%;
+      }
+
+    }
+
+    &__title {
+      font-family: $altFont;
+      font-weight: 100;
+      font-size: 50px;
+      margin: 0;
+      margin-bottom: 20px;
+      position: relative;
+
+      @include mq(md) {
+        font-size: 120px;
+        margin: 0;
+        margin-bottom: 40px;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 1px;
+        background: $white;
+      }
+    }
+
+    &__text {
+      text-transform: uppercase;
+      font-weight: 400;
+      line-height: 1.5;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    &__button {
+      @include StyledButton('outline', $white, $darkGray)
+    }
+  }
+}
