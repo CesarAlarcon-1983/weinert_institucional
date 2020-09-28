@@ -300,8 +300,8 @@
 
       img {
         @include mq(md) {
-          position: absolute;
-          height: 100%;
+          // position: absolute;
+          // height: 100%;
           width: 100%;
         }
       }
@@ -408,7 +408,7 @@
         overflow: hidden;
         height: 0;
         padding-bottom: 60%;
-        z-index: 5;
+        z-index: 7;
         cursor: pointer;
 
         @include mq(md) {
@@ -445,19 +445,21 @@
       }
 
       &--overflow-top {
-        z-index: 5;
+        z-index: 7;
         height: 100vw;
 
         @include mq(md) {
+          position: absolute;
+          bottom: 0;
+          left: 5vw;
+          width: calc(100% - 5vw);
           height: calc(100% + 150px + 5vw);
         }
       }
 
       &--overflow-bottom {
-        
         @include mq(md) {
-          height: 100vw;
-          height: calc(100% + 100px + 5vw);
+          height: calc(100% + 5vw);
         }
 
         img {
@@ -468,6 +470,14 @@
             top: 0;
             width: 100%;
           }
+        }
+      }
+
+      &--overflow-visible {
+        overflow: visible;
+
+        @include customMq(1600px) {
+          width: 75%;
         }
       }
 
@@ -496,6 +506,12 @@
 
         @include mq(md) {
           height: calc(100% + 100px + 5vw);
+        }
+
+        img {
+          @include customMq(1600px) {
+            width: 70%;
+          }
         }
       }
     }

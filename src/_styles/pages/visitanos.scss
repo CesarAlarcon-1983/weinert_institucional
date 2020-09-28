@@ -9,7 +9,7 @@
     position: relative;
     min-height: 80vh;
     padding: 0 15px;
-    background: url('https://picsum.photos/id/236/1200/1200') no-repeat center center / cover;
+    background: url('/images/visita/hero.jpg') no-repeat center center / cover;
     z-index: 1;
 
     &:after {
@@ -148,7 +148,7 @@
       }
 
       &:nth-child(1) {
-        background: url('https://picsum.photos/id/235/1200/1200') no-repeat center center / cover;
+        background: url('/images/visita/bottom.jpg') no-repeat center center / cover;
         width: 75%;
 
         @include mq(md) {
@@ -157,7 +157,7 @@
       }
 
       &:nth-child(2) {
-        background: url('https://picsum.photos/id/234/1200/1200') no-repeat center center / cover;
+        background: url('/images/visita/top.jpg') no-repeat center center / cover;
         width: 50%;
         position: absolute;
         right: 0;
@@ -183,7 +183,7 @@
       &:nth-child(1) {
         z-index: 2;
         width: 100%;
-        background: url('https://picsum.photos/id/233/1200/1200') no-repeat center center / cover;
+        background: url('/images/visita/degustaciones.jpg') no-repeat center center / cover;
         height: 0;
         padding-bottom: 100%;
         order: 2;
@@ -439,7 +439,7 @@
   }
 
   &__distribucion {
-    background: url('https://picsum.photos/id/232/1200/1200') no-repeat center center / cover;
+    background: url('/images/visita/distribucion.jpg') no-repeat center center / cover;
     padding: 50px 0;
     margin-top: -5%;
     position: relative;

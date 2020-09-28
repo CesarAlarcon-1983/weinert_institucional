@@ -159,6 +159,12 @@
         width: calc(100% - 20vw);
         padding: 0;
       }
+
+      @include customMq(1600px) {
+        bottom: auto;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+      }
     }
 
     &__title {
@@ -267,9 +273,13 @@
 
         @include mq(md) {
           right: -40%;
-          top: -5%;
+          top: -10%;
           bottom: auto;
-          height: 20%;
+          height: 25%;
+        }
+
+        @include customMq(1600px) {
+          height: 30%;
         }
       }
     }

@@ -10,7 +10,7 @@
     position: relative;
     min-height: 80vh;
     padding: 0 15px;
-    background: url('https://picsum.photos/id/236/1200/1200') no-repeat center center / cover;
+    background: url('/images/vinos/hero.jpg') no-repeat center center / cover;
 
     &:after {
       content: '';
@@ -138,6 +138,20 @@
         width: 50%;
       }
 
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 70%;
+        transform: translate3d(-50%, -50%, 0);
+        width: auto;
+        
+        @include mq(md) {
+          left: -17%;
+          transform: translate3d(0, -50%, 0);
+        }
+      }
+
       &--order {
         order: 1;
 
@@ -147,19 +161,26 @@
       }
 
       &--overflow {
-        background: url('https://picsum.photos/id/237/1200/1200') no-repeat center center / cover;
+        background: url('/images/vinos/carrascal.jpg') no-repeat center center / cover;
         width: 100%;
         padding: 0 0 100% 0;
+        position: relative;
         
         @include mq(md) {
           margin-left: 10vw;
           padding: 0 0 57% 0;
           width: calc(50% - 10vw);
         }
+
+        img {
+          @include mq(md) {
+            top: calc(50% + 7%);
+          }
+        }
       }
 
       &--weinert {
-        background: url('https://picsum.photos/id/236/1200/1200') no-repeat center center / cover;
+        background: url('/images/vinos/weinert.jpg') no-repeat center center / cover;
         width: 100%;
         padding: 0 0 100% 0;
         order: 2;
@@ -169,11 +190,19 @@
           margin-right: 10vw;
           padding: 0 0 50% 0;
           order: 1;
+        }
+
+        img {
+          @include mq(md) {
+            left: auto;
+            right: -15%;
+            height: 80%;
+          }
         }
       }
 
       &--cavas {
-        background: url('https://picsum.photos/id/235/1200/1200') no-repeat center center / cover;
+        background: url('/images/vinos/selection.jpg') no-repeat center center / cover;
         width: 100%;
         padding: 0 0 100% 0;
         
@@ -182,10 +211,17 @@
           padding: 0 0 50% 0;
           width: calc(50% - 10vw);
         }
+
+        img {
+          @include  mq(md) {
+            left: -15%;
+            height: 80%;
+          }
+        }
       }
 
       &--tonel {
-        background: url('https://picsum.photos/id/232/1200/1200') no-repeat center center / cover;
+        background: url('/images/vinos/tonel-unico.jpg') no-repeat center center / cover;
         width: 100%;
         padding: 0 0 100% 0;
         order: 2;
@@ -196,10 +232,18 @@
           padding: 0 0 50% 0;
           order: 1;
         }
+
+        img {
+          @include mq(md) {
+            left: auto;
+            right: -15%;
+            height: 75%;
+          }
+        }
       }
 
       &--estrella {
-        background: url('https://picsum.photos/id/230/1200/1200') no-repeat center center / cover;
+        background: url('/images/vinos/extrella.jpg') no-repeat center center / cover;
         width: 100%;
         padding: 0 0 100% 0;
         
@@ -207,6 +251,13 @@
           margin-left: 10vw;
           padding: 0 0 50% 0;
           width: calc(50% - 10vw);
+        }
+
+        img {
+          @include mq(md) {
+            left: -16%;
+            height: 80%;
+          }
         }
       }
     }
@@ -272,7 +323,7 @@
         padding-bottom: px;
 
         @include mq(md) {
-          font-size: 110px;
+          font-size: 70px;
         }
 
   
