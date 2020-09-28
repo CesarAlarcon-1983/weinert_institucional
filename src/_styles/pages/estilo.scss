@@ -121,6 +121,8 @@
     position: relative;
 
     &__scroll-button {
+      @include trans;
+
       position: absolute;
       top: 50%;
       left: 50%;
@@ -134,16 +136,24 @@
       pointer-events: none;
       user-select: none;
       outline: none;
+      display: none;
 
       @include mq(md) {
         width: 150px;
         height: 150px;
         pointer-events: all;
+        display: block;
       }
 
       img {
         width: 60%;
         user-select: none;
+        pointer-events: none;
+        user-select: none;
+      }
+
+      &.-hidden {
+        opacity: 0;
         pointer-events: none;
       }
     }
@@ -267,6 +277,7 @@
       width: 100%;
       overflow-x: auto;
       background: #F0ECE1;
+      overflow-y: hidden;
 
       @include mq(md) {
         height: calc(100% + 15px);
@@ -306,43 +317,44 @@
       }
 
       &:nth-of-type(1) {
-        top: 65%;
-        left: 15%;
+        top: 25%;
+        left: 50%;
       }
 
       &:nth-of-type(2) {
-        top: 35%;
-        left: 25%;
+        top: 65%;
+        left: 61%;
       }
 
       &:nth-of-type(3) {
-        top: 25%;
-        left: 30%;
+        top: 65%;
+        left: 37%;
       }
 
       &:nth-of-type(4) {
-        top: 50%;
-        left: 45%;
+        top: 65%;
+        left: 25%;
       }
 
       &:nth-of-type(5) {
-        top: 90%;
-        left: 55%;
+        top: 65%;
+        left: 90%;
       }
 
       &:nth-of-type(6) {
-        top: 70%;
-        left: 70%;
+        top: 45%;
+        left: 75%;
       }
 
       &:nth-of-type(7) {
-        top: 10%;
-        left: 80%;
+        top: 45%;
+        left: 5%;
       }
       &:nth-of-type(8) {
-        top: 85%;
-        left: 90%;
+        top: 45%;
+        left: 35%;
       }
+
       &:nth-of-type(9) {
         top: 45%;
         left: 95%;

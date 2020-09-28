@@ -34,6 +34,7 @@ var Header = function() {
     closeButtons.on('click', function(e) {
         e.preventDefault();
         contents.removeClass('-active');
+        scrollControl.removeClass('-hidden');
     })
 
     targets.on('click', function(e) {
@@ -43,6 +44,7 @@ var Header = function() {
         contents.removeClass('-active');
 
         $(this).addClass('-active');
+        scrollControl.addClass('-hidden');
 
         var targettedContent = $(this).data('target');
 
