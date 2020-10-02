@@ -8,7 +8,7 @@
     justify-content: center;
     flex-direction: column;
     position: relative;
-    min-height: 80vh;
+    min-height: 90vh;
     padding: 0 15px;
     background: url('/images/vinos/hero.jpg') no-repeat center center / cover;
 
@@ -357,7 +357,7 @@
     &__text {
       color: $darkGray;
       text-transform: uppercase;
-      line-height: 1.7;
+      line-height: 2;
       font-weight: 500;
       font-size: 14px;
 

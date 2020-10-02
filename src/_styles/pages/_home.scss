@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    min-height: 70vh;
+    min-height: 80vh;
     padding: 0 15px;
     background: url('/images/home/hero.jpg') no-repeat center center / cover;
 
@@ -182,11 +182,34 @@
     background: url('/images/home/frase.jpg') no-repeat center center / cover;
     
     @include mq(md) {
-      margin-top: -15vh;
-      height: 80vh;
+      margin-top: -20vh;
+      height: 90vh;
     }
-    // padding-top: 15vh;
-    // background: url('https://picsum.photos/id/241/1200/1200') no-repeat center center / cover;
+
+    &__slide {
+      height: 90vh;
+      position: relative;
+    }
+
+    .slick-dots {
+      left: auto;
+      right: 40px;
+      bottom: 0;
+      top: 50%;
+
+      .slick-active {
+        button {
+          &:before {
+            color: $midBeige;
+          }
+        }
+      }
+      li {
+        display: block;
+
+
+      }
+    }
 
     &__content {
       position: absolute;
@@ -309,7 +332,7 @@
   }
 
   &__vinos {
-    background: url('/images/home/vinos.jpg') no-repeat center center / cover;
+    background: url('/images/home/vinos.jpg') no-repeat center bottom / cover;
 
     &__container {
       width: 100%;
@@ -496,14 +519,14 @@
         display: block;
 
         @include mq(md) {
-          font-size: 100px;
+          font-size: 80px;
         }
       }
     }
 
     &__quote {
       font-size: 26px;
-      color: $darkestGray;
+      color: $darkGray;
       text-transform: uppercase;
       font-family: $titleFont;
       font-weight: 100;
@@ -511,7 +534,7 @@
       margin-bottom: 20px;
 
       @include mq(md) {
-        font-size: 30px;
+        font-size: 28px;
       }
     }
 
@@ -527,14 +550,14 @@
     }
 
     &__quoter-text {
-      color: $darkestGray;
+      color: $darkGray;
       font-family: $altFont;
       font-size: 30px;
       transform: rotate(-5deg);
       margin: 0;
 
       @include mq(md) {
-        font-size: 50px;
+        font-size: 44px;
       }
     }
 

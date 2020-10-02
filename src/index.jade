@@ -1,18 +1,20 @@
 extends _layouts/base
 
+include ./_modules/slider/slider
+
 block content
   main.home
     section.home__hero
       h1.home__hero__title El hombre persigue imposibles,<br> a veces los alcanza
       ul.home__hero__social
         li
-          a(href="#" target="_blank")
+          a(href="https://www.facebook.com/bodegaweinert" target="_blank")
             i.fab.fa-facebook-f
         li
-          a(href="#" target="_blank")
+          a(href="https://www.instagram.com/bodega.weinert/" target="_blank")
             i.fab.fa-instagram
         li
-          a(href="#" target="_blank")
+          a(href="https://twitter.com/BodegaWeinert" target="_blank")
             i.fab.fa-twitter
     section.home__estilo
       div.home__estilo__container
@@ -20,26 +22,39 @@ block content
           div.home__estilo__content
             h2.home__estilo__title Estilo
             p.home__estilo__text La interpretación de la escuela<br> europea en el nuevo mundo.
-            a.home__estilo__button(href="#") Ver más
+            a.home__estilo__button(href="/estilo") Ver más
         div.home__estilo__wrapper
         div.home__estilo__wrapper
         div.home__estilo__wrapper
           div.home__estilo__content
             h2.home__estilo__title Historia
             p.home__estilo__text Etiquetamos malbec antes<br>del malbec
-            a.home__estilo__button(href="#") Ver más
+            a.home__estilo__button(href="/historia") Ver más
 
     section.home__interstitial
-      div.home__interstitial__content
-        span.quote-icon ❛❛
-        p.home__interstitial__quote Son incuestionablement los<br> mejores de Sudamérica.
-        div.home__interstitial__wrapper
-          p.home__interstitial__text Robert Parker
-          div.home__interstitial__group
-            span.home__interstitial__date (1994)
-            img(src="/images/underline.png")
-        div.home__interstitial__image
-          img(src="https://picsum.photos/id/237/200/200")
+      +slider('home__interstitial__slider', 'normal')
+        .home__interstitial__slide
+          div.home__interstitial__content
+            span.quote-icon ❛❛
+            p.home__interstitial__quote Son incuestionablemente los<br> mejores de Sudamérica.
+            div.home__interstitial__wrapper
+              p.home__interstitial__text Robert Parker
+              div.home__interstitial__group
+                span.home__interstitial__date (1994)
+                img(src="/images/underline.png")
+            div.home__interstitial__image
+              img(src="https://picsum.photos/id/237/200/200")
+        .home__interstitial__slide
+          div.home__interstitial__content
+            span.quote-icon ❛❛
+            p.home__interstitial__quote Son incuestionablemente los<br> mejores de Sudamérica.
+            div.home__interstitial__wrapper
+              p.home__interstitial__text Robert Parker
+              div.home__interstitial__group
+                span.home__interstitial__date (1994)
+                img(src="/images/underline.png")
+            div.home__interstitial__image
+              img(src="https://picsum.photos/id/237/200/200")
 
     section.home__vinos
       div.home__vinos__container
@@ -56,7 +71,7 @@ block content
             i.fas.fa-play
           div.home__visitanos__group
             span.quote-icon ❛❛
-            p.home__visitanos__quote Si encuentras tu filisifía y la mantienes a través de los años, estarás en buen camino.
+            p.home__visitanos__quote Si encuentras tu filosifía y la mantienes a través de los años, estarás en buen camino.
             div.home__visitanos__quoter
               img(src="/images/underline.png")
               p.home__visitanos__quoter-text Bernardo C. Weinert
