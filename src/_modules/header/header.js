@@ -57,6 +57,29 @@ var Header = function() {
     var scrollControl = $('.estilo__map__scroll-button');
     var container = $('.estilo__map__container');
     var xMovement;
+    var viewport = $(document).width();
+
+    console.log(viewport)
+
+    if(viewport < 720) {
+        container.scrollLeft(viewport/2);
+    } else {
+        container.scrollLeft(0);
+
+    }
+
+    $(window).on('resize', function() {
+        var viewport = $(document).width();
+
+        console.log(viewport)
+
+        if(viewport < 720) {
+            container.scrollLeft(viewport/2);
+        } else {
+            container.scrollLeft(0);
+    
+        }
+    })
 
     scrollControl.on('mousedown', function(e) {
         var xInitialPosition = e.pageX;

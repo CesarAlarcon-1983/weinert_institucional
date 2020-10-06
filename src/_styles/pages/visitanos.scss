@@ -19,7 +19,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: rgba(0, 0, 0, .35);
+      background: rgba(0, 0, 0, .15);
     }
 
     @include mq(md) {
@@ -405,6 +405,7 @@
 
     &__form-select {
       -webkit-appearance: none;
+      text-transform: uppercase;
       border: none;
       border-bottom: 1px solid $darkGray;
       width: 100%;
