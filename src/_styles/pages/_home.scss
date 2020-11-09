@@ -1,5 +1,7 @@
 .home {
   overflow: hidden;
+  background: $lightBeige;
+
 
   &__hero {
     display: flex;
@@ -69,6 +71,7 @@
   &__estilo {
     position: relative;
     z-index: 3;
+    // transform: translateY(5vw);
 
     &__container {
       display: flex;
@@ -89,17 +92,18 @@
       }
 
       &:nth-child(1),
+      &:nth-child(2),
       &:nth-child(4) {
         @include mq(md) {
           padding-bottom: calc(50% - 5vw);
         }
       }
 
-      &:nth-child(2),
+      // &:nth-child(2),
       &:nth-child(3),
       &:nth-child(4) {
         @include mq(md) {
-          transform: translateY(-5vw);
+          // transform: translateY(-5vw);
         }
       }
 
@@ -178,24 +182,32 @@
 
   &__interstitial {
     position: relative;
-    height: 100vh;
     background: url('/images/home/frase.jpg') no-repeat center center / cover;
     
     @include mq(md) {
-      margin-top: -20vh;
-      height: 90vh;
+      margin-top: -100px;
     }
 
     &__slide {
-      height: 90vh;
       position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slick-slider {
+      margin-bottom: 0 !important;
     }
 
     .slick-dots {
       left: auto;
-      right: 40px;
+      right: -10px;
       bottom: 0;
       top: 50%;
+
+      @include mq(md) {
+        right: 40px;
+      }
 
       .slick-active {
         button {
@@ -204,6 +216,7 @@
           }
         }
       }
+
       li {
         display: block;
 
@@ -212,16 +225,15 @@
     }
 
     &__content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate3d(-50%, -50%, 0);
       text-align: center;
       width: calc(100% - 30px);
+      padding: 50px 0;
+      margin-left: auto;
+      margin-right: auto;
 
       @include mq(md) {
         width: auto;
-        top: calc(50% + 5vh);
+        padding: 150px 0 100px 0;
       }
 
       .quote-icon {

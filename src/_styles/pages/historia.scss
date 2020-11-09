@@ -412,8 +412,8 @@
         cursor: pointer;
 
         @include mq(md) {
-          top: 0;
-          transform: translateY(calc(-50% - 150px - 5vw));
+          top: 12px;
+          transform: translateY(calc(-50%));
           right: -10vw;
           width: calc(100% - 5vw);
         }
@@ -453,7 +453,7 @@
           bottom: 0;
           left: 5vw;
           width: calc(100% - 5vw);
-          height: calc(100% + 150px + 5vw);
+          height: calc(100%);
         }
       }
 
