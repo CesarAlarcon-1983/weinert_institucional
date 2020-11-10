@@ -408,11 +408,11 @@
         overflow: hidden;
         height: 0;
         padding-bottom: 60%;
-        z-index: 7;
+        z-index: 5;
         cursor: pointer;
 
         @include mq(md) {
-          top: 12px;
+          top: -14px;
           transform: translateY(calc(-50%));
           right: -10vw;
           width: calc(100% - 5vw);
@@ -445,7 +445,7 @@
       }
 
       &--overflow-top {
-        z-index: 7;
+        z-index: 5;
         height: 100vw;
 
         @include mq(md) {
